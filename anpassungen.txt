@@ -2,8 +2,8 @@ Markup Hero section:
 fragen:
 -index.html ist index.css auch okay oder lieber style.css?
 -header als Container beibehalten (Musterlösung: section class="hero" )?
+- egal wie man die farben schreibt ?
 
--<br /> für Zeilenumbruch im h1 beibehalten?
 verändert:
 -HTML: class="title", class="subtitle", class="hero-action" zu den Elementen hinzugefügt
 -CSS: Selektoren h1  .title, h5  .subtitle,   a/a:hover  .hero-action/.hero-action:hover
