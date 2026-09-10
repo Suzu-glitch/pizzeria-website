@@ -45,7 +45,7 @@ body {
   color: #ff3030;
 }
 .hero {
-  height: 100vh;
+  height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -74,4 +74,27 @@ body {
     font-size: 6rem;
     line-height: 6.5rem;
   }
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 4rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  padding: 0 1.5rem;
+}
+.nav-links a:hover {
+  color: #ff3030;
 }
