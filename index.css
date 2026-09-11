@@ -22,27 +22,28 @@ body {
   background-color: #1a1a1a;
   color: #fff;
   font-family: "Inter", sans-serif;
+  --primary-color: #ff3030;
 }
 
 .subtitle {
   color: #ddd;
 
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 400;
 }
 
 .hero-action {
   margin-top: 4rem;
   color: #fff;
-  background-color: #ff3030;
+  background-color: var(--primary-color);
   padding: 1rem 2rem;
-  border: 1px solid #ff3030;
+  border: 1px solid var(--primary-color);
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 .hero-action:hover {
   background-color: transparent;
-  color: #ff3030;
+  color: var(--primary-color);
 }
 .hero {
   height: calc(100vh - 5rem);
@@ -67,34 +68,39 @@ body {
   .hero-action {
     padding: 1.2rem 2.5rem;
   }
+  .nav {
+    gap: 2rem;
+    font-size: 1rem;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .title {
     font-size: 6rem;
+
     line-height: 6.5rem;
   }
+  .nav {
+    gap: 4rem;
+  }
 }
-.nav-links {
+.nav {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  min-height: 5rem;
+  padding: 0rem 1rem;
+  gap: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
-.nav-links a {
+.nav-item {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+  transition: all 0.2s ease-in-out;
 }
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5rem;
-  padding: 0 1.5rem;
-}
-.nav-links a:hover {
-  color: #ff3030;
+.nav-item:hover {
+  color: var(--primary-color);
 }
