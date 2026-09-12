@@ -23,17 +23,19 @@ body {
   color: #fff;
   font-family: "Inter", sans-serif;
   --primary-color: #ff3030;
+  --text-secondary: #ddd;
 }
 
 .subtitle {
-  color: #ddd;
+  color: var(--text-secondary);
 
   font-size: 1rem;
   font-weight: 400;
 }
 
-.hero-action {
-  margin-top: 4rem;
+.button {
+  display: block;
+  width: fit-content;
   color: #fff;
   background-color: var(--primary-color);
   padding: 1rem 2rem;
@@ -41,7 +43,14 @@ body {
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
-.hero-action:hover {
+
+.hero-action {
+  margin-top: 4rem;
+}
+.about-action {
+  margin-top: 2rem;
+}
+.button:hover {
   background-color: transparent;
   color: var(--primary-color);
 }
@@ -103,4 +112,19 @@ body {
 }
 .nav-item:hover {
   color: var(--primary-color);
+}
+.heading {
+  font-size: 1.5rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 2rem 0 1rem 0;
+  width: fit-content;
+  border-bottom: 1px solid var(--primary-color);
+}
+.text {
+  color: var(--text-secondary);
+}
+.about {
+  padding: 3rem 1.5rem;
 }
