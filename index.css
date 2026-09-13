@@ -81,16 +81,8 @@ body {
     gap: 2rem;
     font-size: 1rem;
   }
-}
-
-@media only screen and (min-width: 1000px) {
-  .title {
-    font-size: 6rem;
-
-    line-height: 6.5rem;
-  }
-  .nav {
-    gap: 4rem;
+  .subtitle {
+    font-size: 1.5rem;
   }
 }
 .nav {
@@ -127,4 +119,37 @@ body {
 }
 .about {
   padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-image {
+  max-width: 100%;
+  max-height: 300px;
+}
+.about-images-small {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 1000px) {
+  .title {
+    font-size: 6rem;
+    line-height: 6.5rem;
+  }
+  .nav {
+    gap: 4rem;
+  }
+  .about {
+    flex-direction: row;
+  }
+
+  .about-content {
+    width: 50%;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: row;
+  }
 }
