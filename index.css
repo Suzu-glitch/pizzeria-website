@@ -12,6 +12,9 @@
   margin: 0;
   padding: 0;
 }
+html {
+  scroll-behavior: smooth;
+}
 .title {
   margin: 0 0 1rem 0;
   font-size: 3rem;
@@ -34,6 +37,7 @@ body {
 }
 
 .button {
+  display: inline-block;
   width: fit-content;
   color: #fff;
   background-color: var(--primary-color);
@@ -53,6 +57,15 @@ body {
   background-color: transparent;
   color: var(--primary-color);
 }
+.button-inverted {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.button-inverted:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
 .hero {
   height: calc(100vh - 5rem);
   display: flex;
@@ -69,8 +82,14 @@ body {
 }
 
 .opening-hours-table {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
 }
+
 .hours-entry {
   display: flex;
   justify-content: space-between;
@@ -106,14 +125,16 @@ body {
   font-size: 0.8rem;
   text-align: center;
 }
-.nav-item {
+.nav-item,
+.footer-item {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   transition: all 0.2s ease-in-out;
 }
-.nav-item:hover {
+.nav-item:hover,
+.footer-item:hover {
   color: var(--primary-color);
 }
 .heading {
@@ -129,8 +150,29 @@ body {
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+.contact .heading {
+  margin-top: 0;
+}
+
+.contact-detail {
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.contact-actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.contact-actions .button {
+  width: 13rem;
+  max-width: 100%;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
 .about {
-  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -155,9 +197,47 @@ body {
   flex-direction: column;
   gap: 0.5rem;
 }
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact-image {
+  width: 100%;
+}
 .container {
   max-width: 85%;
   margin: 0 auto;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #303030;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-copyright {
+  margin-top: 1rem;
+  color: var(--text-secondary);
 }
 
 @media only screen and (min-width: 600px) {
@@ -181,6 +261,23 @@ body {
   }
   .opening-hours {
     margin: 4rem 0;
+  }
+  .contact-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .contact-image {
+    width: 60%;
+  }
+  .footer-links {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .footer {
+    margin-top: 4rem;
+    padding: 3rem 0;
+    gap: 3rem;
   }
 }
 
@@ -212,11 +309,31 @@ body {
 
   .hours-entry {
     width: 20rem;
+    margin-bottom: 0.5rem;
     font-size: 1.2rem;
   }
   .opening-hours {
     margin: 8rem 0;
     padding: 6rem 0;
+  }
+  .contact .heading {
+    margin-bottom: 2rem;
+  }
+  .contact-detail {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+  .contact-actions {
+    flex-direction: row;
+  }
+
+  .contact-actions .button {
+    flex: 1;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .contact-image {
+    width: 50%;
   }
 }
 
