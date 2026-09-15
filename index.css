@@ -34,7 +34,6 @@ body {
 }
 
 .button {
-  display: block;
   width: fit-content;
   color: #fff;
   background-color: var(--primary-color);
@@ -76,13 +75,15 @@ body {
   display: flex;
   justify-content: space-between;
   width: 15rem;
+  margin-bottom: 0.25rem;
 }
 .days {
   color: var(--text-secondary);
 }
 
 .opening-hours {
-  padding: 3rem 1.5rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
   text-align: center;
   background:
     linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -132,6 +133,7 @@ body {
   padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 .about-image {
@@ -151,6 +153,7 @@ body {
 .about-images-small {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 .container {
   max-width: 85%;
@@ -176,12 +179,18 @@ body {
   .text {
     font-size: 1rem;
   }
+  .opening-hours {
+    margin: 4rem 0;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .title {
     font-size: 6rem;
     line-height: 6.5rem;
+  }
+  .heading {
+    font-size: 2rem;
   }
   .nav {
     gap: 4rem;
@@ -196,6 +205,18 @@ body {
   .about-images,
   .about-images-small {
     gap: 1rem;
+  }
+  .opening-hours-table {
+    margin-top: 2rem;
+  }
+
+  .hours-entry {
+    width: 20rem;
+    font-size: 1.2rem;
+  }
+  .opening-hours {
+    margin: 8rem 0;
+    padding: 6rem 0;
   }
 }
 
